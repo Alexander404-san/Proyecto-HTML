@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-SV">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
 
     <meta
       name="keywords"
-      content="Portafolio, Desarrollador, Programacion, Ingenieria, Sistemas, Web, Aplicaciones, HTML, SDLC"
+      content="portafolio desarrollador web El Salvador, ingeniero en sistemas El Salvador, HTML portfolio"
     />
 
     <meta name="author" content="Alexander Hernandez" />
@@ -34,7 +34,7 @@
     <meta property="og:site_name" content="Alexander Hernandez Portafolio" />
     <meta
       property="og:description"
-      content="Portafolio de Alexander, desarrollador web."
+      content="Portafolio de Alexander Hernandez, ingeniero en sistemas con experiencia en desarrollo web y buenas prácticas."
     />
     <meta
       property="og:image"
@@ -42,6 +42,8 @@
     />
 
     <meta property="og:type" content="website" />
+
+    <meta property="og:locale" content="es_SV" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Portafolio de Alexander" />
@@ -55,19 +57,32 @@
     />
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/icons/favicon-512.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon.ico" />
+
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+
     <link
       rel="icon"
-      href="assets/icons/favicon-32.png"
-      sizes="32x32"
       type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
     />
-    <link rel="apple-touch-icon" href="assets/icons/favicon-180.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon-16x16.png"
+    />
 
-    <!-- Color barra navegador móvil -->
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- diseño general -->
     <meta name="theme-color" content="#fff000" />
+    <!-- <meta name="color-scheme" content="light dark" /> -->
   </head>
-  <body>
+  <body id="top">
     <header>
       <h1>Alexander Hernandez</h1>
       <p>Desarrollador Web - Ingeniero en Sistemas</p>
@@ -80,7 +95,8 @@
         </ul>
       </nav>
     </header>
-    <main>
+
+    <main id="main-content">
       <section id="sobre-mi">
         <h2>Sobre mí</h2>
 
@@ -111,33 +127,24 @@
           <li>Cloud Computing</li>
         </ul>
 
-        <p>
-          <a
-            href="assets/docs/curriculum-vitae-alexander-hernandez.pdf"
-            download
-          >
-            Descargar CV (PDF)
-          </a>
-        </p>
-        <h3>Perfiles</h3>
+        <p>Para conocer mi trayectoria completa:</p>
 
         <ul>
           <li>
             <a
-              href="https://www.linkedin.com/in/alexander404/"
+              href="assets/docs/curriculum-vitae-alexander-hernandez.pdf"
               target="_blank"
               rel="noopener"
             >
-              LinkedIn
+              <strong>📄 Ver Currículum (PDF)</strong>
             </a>
           </li>
           <li>
             <a
-              href="https://github.com/Alexander404-san"
-              target="_blank"
-              rel="noopener"
+              href="assets/docs/curriculum-vitae-alexander-hernandez.pdf"
+              download="CV_Alexander_Hernandez.pdf"
             >
-              GitHub
+              <strong>📥 Descargar currículum (PDF)</strong>
             </a>
           </li>
         </ul>
@@ -158,7 +165,7 @@
               high="70"
               optimum="90"
               value="75"
-              aria-labelledby="skill-html"
+              aria-label="Nivel de HTML: 75%"
             >
               75%
             </meter>
@@ -177,7 +184,7 @@
               high="70"
               optimum="90"
               value="30"
-              aria-labelledby="skill-css"
+              aria-label="Nivel de CSS: 30%"
             >
               30%
             </meter>
@@ -193,7 +200,7 @@
               high="70"
               optimum="90"
               value="10"
-              aria-labelledby="skill-js"
+              aria-label="Nivel de JavaScript: 10%"
             >
               10%
             </meter>
@@ -209,7 +216,7 @@
               high="70"
               optimum="90"
               value="60"
-              aria-labelledby="skill-seo"
+              aria-label="Nivel de SEO técnico: 60%"
             >
               60%
             </meter>
@@ -277,7 +284,7 @@
             <a href="proyectos/hexa.html">
               <img
                 src="assets/img/proyectos/hexa.jpg"
-                alt="Landing page de servicios HEXA Solutions"
+                alt="Captura de pantalla de la landing page de servicios HEXA Solutions"
                 width="300"
                 height="200"
                 loading="lazy"
@@ -356,7 +363,9 @@
         </p>
 
         <form action="https://formspree.io/f/mgonrdrz" method="POST">
-          <p>
+          <fieldset>
+            <legend>Información de contacto</legend>
+
             <label for="nombre">Nombre:</label><br />
             <input
               type="text"
@@ -365,13 +374,13 @@
               required
               autocomplete="name"
               maxlength="30"
-              pattern="[A-Za-zÁ-ÿ ]+"
+              pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$"
               title="No se permiten números, solo letras"
               placeholder="Juanito Pérez"
             />
-          </p>
 
-          <p>
+            <br /><br />
+
             <label for="email">Correo electrónico:</label><br />
             <input
               type="email"
@@ -381,9 +390,9 @@
               autocomplete="email"
               placeholder="ejemplo@dominio.com"
             />
-          </p>
 
-          <p>
+            <br /><br />
+
             <label for="mensaje">Mensaje:</label><br />
             <textarea
               id="mensaje"
@@ -392,34 +401,55 @@
               placeholder="Escribe tu mensaje aquí..."
               required
             ></textarea>
-          </p>
 
-          <p>
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nuevo mensaje desde portafolio"
+            />
+
+            <br /><br />
+
             <button type="reset">Limpiar</button>
             <button type="submit">Enviar mensaje</button>
-          </p>
+          </fieldset>
         </form>
       </section>
+      <br />
+      <a href="#top">↑ Volver al inicio</a>
     </main>
     <footer>
       <hr />
-      <h3>Redes de contacto</h3>
-      <p>
-        <a href="mailto:alexander404@gmail.com">📧 alexander404@gmail.com</a> |
-        <a
-          href="https://www.linkedin.com/in/alexander404/"
-          target="_blank"
-          rel="noopener"
-          >💼 LinkedIn</a
-        >
-        |
-        <a
-          href="https://github.com/Alexander404-san"
-          target="_blank"
-          rel="noopener"
-          >💻 GitHub</a
-        >
-      </p>
+      <p><strong>Redes de contacto</strong></p>
+
+      <ul>
+        <li>
+          <a
+            href="mailto:alexander404@gmail.com?subject=Contacto desde el Portafolio"
+            title="Enviar un correo a mi dirección de email"
+          >
+            📧 alexander404@gmail.com
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/alexander404/"
+            target="_blank"
+            rel="me noopener noreferrer"
+            title="Visitar mi perfil de LinkedIn"
+            >💼 LinkedIn</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/Alexander404-san"
+            target="_blank"
+            rel="me noopener noreferrer"
+            title="Visitar mi perfil de GitHub"
+            >💻 GitHub</a
+          >
+        </li>
+      </ul>
       <p>&copy; 2026 Alexander Hernandez. Todos los derechos reservados.</p>
     </footer>
   </body>
